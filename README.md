@@ -1,118 +1,70 @@
-# Technical Challenges & Solutions
+# Custom CMS Showcase
 
-This document outlines some of the key technical challenges encountered during the development of the custom CMS system and how they were addressed.
+![Custom CMS Dashboard](./assets/dashboard-preview.png)
 
-## 1. Complex Excel Data Processing
+## 📋 Project Overview
 
-### Challenge
-The client needed to import large Excel files (10,000+ rows) with complex data structures, including nested relationships, formulas, and data validation rules. These imports needed to be validated against existing database records and handle partial updates.
+This repository provides a detailed showcase of a private custom CMS (Content Management System) project I developed. The actual code remains in a private repository to maintain client confidentiality, but this showcase demonstrates the architecture, functionality, and technical achievements of the project.
 
-### Solution
-I developed a multi-stage processing pipeline:
+### 🔍 Project Context
 
-1. **Initial Upload & Validation**
-   - Created a streaming parser to handle large files without memory issues
-   - Implemented a validation schema generator that could be customized per sheet type
-   - Added progress tracking for long-running imports
+The client needed a tailored content management system with advanced data handling capabilities, particularly for managing complex Excel data. Their existing workflows involved manual data processing across multiple spreadsheets, leading to inefficiencies and potential errors.
 
-2. **Data Transformation**
-   - Built a flexible mapping system allowing admins to define how Excel columns map to database fields
-   - Created custom transformation functions for complex data types (dates, enumerations, relationships)
-   - Implemented formula evaluation for calculated fields
+### 🎯 Key Requirements
 
-3. **Database Integration**
-   - Designed a transaction-based import process with rollback capabilities
-   - Created a diff generator to identify changes between imports
-   - Implemented conflict resolution strategies that could be selected by users
+- Secure authentication with role-based permissions
+- Dynamic form builder for content creation
+- Advanced Excel integration (import/export with validation)
+- Custom dashboards with real-time analytics
+- Full version history and audit logging
+- Mobile-responsive interface
 
-### Results
-- Reduced import processing time by 78% compared to the previous manual process
-- Decreased data errors by 94% through automated validation
-- Enabled handling of files up to 50MB without performance degradation
+### 💻 My Role
 
-## 2. Dynamic Form Builder
+As the lead developer, I was responsible for:
+- Architecture design
+- Database schema development
+- Backend API development
+- Frontend implementation
+- Integration with Excel processing libraries
+- Deployment and CI/CD pipeline setup
 
-### Challenge
-The CMS needed to allow administrators to create custom forms with complex validation rules, conditional fields, and nested sections - all without requiring developer intervention.
+## 🛠️ Technology Stack
 
-### Solution
-I architected a component-based form builder:
+### Backend
+- **Framework**: Node.js with Express
+- **Database**: PostgreSQL with TypeORM
+- **Authentication**: JWT with role-based access control
+- **File Handling**: Multer with custom validation middleware
+- **Excel Processing**: ExcelJS with custom parsing logic
 
-1. **Form Schema Design**
-   - Created a JSON schema specification for defining form structures
-   - Implemented a versioning system for form definitions
-   - Developed migration tools for evolving form structures over time
+### Frontend
+- **Framework**: React with TypeScript
+- **State Management**: React Context API and custom hooks
+- **UI Library**: Custom components with Tailwind CSS
+- **Data Visualization**: Recharts for interactive dashboards
+- **Form Management**: React Hook Form with Zod validation
 
-2. **Dynamic Rendering**
-   - Built a recursive component rendering system to handle nested form structures
-   - Implemented a plugin architecture for custom field types
-   - Created a context-based state management system for field interactions
+### DevOps
+- **CI/CD**: GitHub Actions
+- **Hosting**: AWS EC2
+- **Storage**: AWS S3 for media files
+- **Monitoring**: Datadog for performance tracking
 
-3. **Validation System**
-   - Developed a rules engine for complex validation logic
-   - Implemented cross-field validation with dependency tracking
-   - Created a custom validator compiler that generated efficient validation code
+## 🔗 Additional Resources
 
-### Results
-- Enabled non-technical users to create forms with 40+ field types
-- Reduced form creation time from days of development to minutes of configuration
-- Created 35+ reusable form components that are now used across multiple projects
+- [Architecture Overview](./architecture-diagram.png)
+- [Technical Challenges & Solutions](./technical-challenges.md)
+- [Performance Benchmarks](./performance-benchmarks.md)
+- [Demo Videos](./demo-videos)
 
-## 3. Real-time Collaboration
+## 📬 Contact Information
 
-### Challenge
-Multiple users needed to work simultaneously on the same content without conflicts, with changes visible to all active users in real-time.
+For more information about this project or similar work, please contact me:
 
-### Solution
-I implemented a multi-layered approach:
-
-1. **WebSocket Architecture**
-   - Set up a socket.io server with room-based subscriptions
-   - Implemented a custom protocol for efficient diff synchronization
-   - Created heartbeat monitoring for presence awareness
-
-2. **Conflict Resolution**
-   - Developed an operational transformation system for concurrent edits
-   - Implemented a last-write-wins strategy with conflict highlighting
-   - Created a version history viewer for reviewing changes
-
-3. **Performance Optimization**
-   - Implemented debouncing for frequent updates
-   - Created a batching system for synchronizing multiple changes
-   - Added selective updates to minimize network traffic
-
-### Results
-- Successfully enabled 15+ simultaneous editors without performance degradation
-- Reduced data conflicts by 98% compared to traditional save methods
-- Implemented an audit system that tracked all changes with user attribution
-
-## 4. Custom Dashboard Builder
-
-### Challenge
-The client needed a flexible dashboard system where users could create personalized views of their data with interactive visualizations and real-time updates.
-
-### Solution
-I developed a modular dashboard framework:
-
-1. **Widget System**
-   - Created a plugin architecture for dashboard widgets
-   - Implemented a drag-and-drop interface for widget arrangement
-   - Developed a responsive grid system that adapted to different screen sizes
-
-2. **Data Connectivity**
-   - Built a query builder interface for non-technical users
-   - Implemented caching strategies for expensive calculations
-   - Created a subscription system for real-time data updates
-
-3. **Visualization Components**
-   - Developed reusable chart components with consistent theming
-   - Implemented interactive filtering and drill-down capabilities
-   - Created export functions for reports and presentations
-
-### Results
-- Enabled creation of 20+ custom dashboard types without developer intervention
-- Reduced reporting time by 85% through automated data visualization
-- Improved decision-making through real-time data accessibility
+- Email: [michele.vigano.work@gmail.com](mailto:michele.vigano.work@gmail.com)
+- GitHub: [MicheleVigano](https://github.com/MicheleVigano)
+- LinkedIn: [Michele Vigano](https://www.linkedin.com/in/michele-vigano)
 
 ---
 
