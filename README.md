@@ -1,6 +1,6 @@
 # Custom CMS Showcase
 
-![Custom CMS Dashboard](./assets/dashboard-preview.png)
+![Custom CMS Dashboard](https://mikevigano.com/_next/image?url=%2Fproduct_images%2Fcms.png&w=1920&q=75)
 
 ## 📋 Project Overview
 
@@ -21,7 +21,7 @@ The client needed a tailored content management system with advanced data handli
 
 ### 💻 My Role
 
-As the lead developer, I was responsible for:
+As solo developer, I was responsible for:
 - Architecture design
 - Database schema development
 - Backend API development
@@ -32,24 +32,21 @@ As the lead developer, I was responsible for:
 ## 🛠️ Technology Stack
 
 ### Backend
-- **Framework**: Node.js with Express
-- **Database**: PostgreSQL with TypeORM
-- **Authentication**: JWT with role-based access control
-- **File Handling**: Multer with custom validation middleware
+- **Framework**: Next.js API routes
+- **Database**: mySQL with Drizzle
+- **Authentication**: NextAuth - JWT with role-based access control
 - **Excel Processing**: ExcelJS with custom parsing logic
 
 ### Frontend
 - **Framework**: React with TypeScript
-- **State Management**: React Context API and custom hooks
-- **UI Library**: Custom components with Tailwind CSS
-- **Data Visualization**: Recharts for interactive dashboards
+- **Styling**: TailwindCSS with Shadcn UI components
+- **Data Visualization**: Cutomized interactive dashboards
 - **Form Management**: React Hook Form with Zod validation
 
 ### DevOps
 - **CI/CD**: GitHub Actions
-- **Hosting**: AWS EC2
-- **Storage**: AWS S3 for media files
-- **Monitoring**: Datadog for performance tracking
+- **Hosting**: Vercel
+- **Storage**: Azure mySQL on VM
 
 ## 🔗 Additional Resources
 
@@ -64,8 +61,8 @@ For more information about this project or similar work, please contact me:
 
 - Email: [michele.vigano.work@gmail.com](mailto:michele.vigano.work@gmail.com)
 - GitHub: [MicheleVigano](https://github.com/MicheleVigano)
-- LinkedIn: [Michele Vigano](https://www.linkedin.com/in/michele-vigano)
+- LinkedIn: [Michele Vigano](https://www.linkedin.com/in/michelevigano/)
 
 ---
 
-*Last updated: 2025-03-24 15:46:50 by MicheleVigano*
+*Last updated: 2025-03-24 by MicheleVigano*
